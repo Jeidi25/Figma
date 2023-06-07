@@ -7,44 +7,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documento</title>
     <link rel="stylesheet" href="index.css">
+
+    <script>
+        function llamarGrupo() {
+            var request = new XMLHttpRequest();
+            request.open("GET", "https://desarrollo.sincoerp.com/SincoOk/V3/SGP/pruebas/grupoSGP.json", false);
+            request.send(null);
+            request.onreadystatechange = function () {
+                if (request.readyState === 4 && request.status === 200) {
+                    var my_JSON_object = JSON.parse(request.responseText);
+                    console.log(my_JSON_object);
+                }
+            }
+        }
+    </script>
 </head>
 
-<body>
+<body onload="llamarGrupo()">
 
     <header class="header">
-        <div class="grid">
 
-            <h1 class="weigth-600">
-                Grupo de usuarios de <span class="weigth-400">proyectos</span>
-            </h1>
+        <h1>
+            Grupo de usuarios de proyectos
+        </h1>
 
+        <div class="botones">
+            <div class="nuevo">
+                <input type="button" value="Nuevo grupo">
+            </div>
+            <div class="buscar">
+                <input type="text" placeholder="Buscar">
+            </div>
 
-            <input type="text" class="buscar_texto" placeholder="Buscar">
-
-
-            <input type="button" class="boton" value="Nuevo grupo">
         </div>
+
+
     </header>
 
     <main>
         <section class="container">
             <div class="tarjeta">
+                <div class="iniciales-nombre">
 
-                <div class="comite">
                     <h3>CC</h3>
+
                 </div>
-                Comite de cambios
-                <div class="circulos">
-                    <div class="circuloJB">
+                <span> Comite de cambios </span>
+                <div class="integrantes">
+                    <div class=" integrante circuloJB">
                         JB
                     </div>
-                    <div class="circuloDG">
+                    <div class="integrante circuloDG">
                         DG
                     </div>
-                    <div class="circuloDR">
+                    <div class="integrante circuloDR">
                         DR
                     </div>
-                    <div class="circuloRN">
+                    <div class="integrante circuloRN">
                         RN
                     </div>
                 </div>
@@ -53,120 +72,108 @@
                 </div>
             </div>
 
-
-            <div class="tarjeta2">
-                <div class="consultores">
-                    <h3>CS</h3>
+            <div class="tarjeta">
+                <div class="iniciales-nombre">
+                    <h3>CT</h3>
                 </div>
-
-                Consultores
-
-                <div class="circulos">
-                    <div class="circuloJB">
+                <span>Consultores</span>
+                <div class="integrantes">
+                    <div class="integrante circuloJB">
                         JB
                     </div>
-                    <div class="circuloDG">
+                    <div class="integrante circuloDG">
                         DG
                     </div>
-                    <div class="circuloDR">
+                    <div class="integrante circuloDR">
                         DR
                     </div>
-                    <div class="circuloRN">
+                    <div class="integrante circuloRN">
                         RN
                     </div>
                 </div>
-                <div class="Quitar2">
+                <div class="Quitar">
                     Quitar
                 </div>
             </div>
-            </div>
 
-            <div class="tarjeta3">
-                <div class="coordinador">
+            <div class="tarjeta">
+                <div class="iniciales-nombre">
                     <h3>CD</h3>
                 </div>
-
-                coordinadores
-
-                <div class="circulos">
-                    <div class="circuloJB">
+                <span>Coordinadores</span>
+                <div class="integrantes">
+                    <div class="integrante circuloJB">
                         JB
                     </div>
-                    <div class="circuloDG">
+                    <div class="integrante circuloDG">
                         DG
                     </div>
-                    <div class="circuloDR">
+                    <div class="integrante circuloDR">
                         DR
                     </div>
-                    <div class="circuloRN">
+                    <div class="integrante circuloRN">
                         RN
                     </div>
                 </div>
-                <div class="Quitar3">
+                <div class="Quitar">
                     Quitar
                 </div>
             </div>
-            </div>
 
-
-            <div class="tarjeta4">
-                <div class="Director">
-                    <h3>DP</h3>
+            <div class="tarjeta">
+                <div class="iniciales-nombre">
+                    <div class="morado">
+                        <h3>DP</h3>
+                    </div>
                 </div>
-
-                Directores de Proyecto
-
-                <div class="circulos">
-                    <div class="circuloJB">
+                <span>Directores de Proyecto</span>
+                <div class="integrantes">
+                    <div class="integrante circuloJB">
                         JB
                     </div>
-                    <div class="circuloDG">
+                    <div class="integrante circuloDG">
                         DG
                     </div>
-                    <div class="circuloDR">
+                    <div class="integrante circuloDR">
                         DR
                     </div>
-                    <div class="circuloRN">
+                    <div class="integrante circuloRN">
                         RN
                     </div>
                 </div>
-                <div class="Quitar4">
+                <div class="Quitar">
                     Quitar
                 </div>
             </div>
-            </div>
 
-            <div class="tarjeta5">
-                <div class="Gerente">
-                    <h3>GE</h3>
+            <div class="tarjeta">
+                <div class="iniciales-nombre">
+                    <h3>GR</h3>
                 </div>
-
-                Gerentes
-
-                <div class="circulos">
-                    <div class="circuloJB">
+                <span>Gerentes</span>
+                <div class="integrantes">
+                    <div class="integrante circuloJB">
                         JB
                     </div>
-                    <div class="circuloDG">
+                    <div class="integrante circuloDG">
                         DG
                     </div>
-                    <div class="circuloDR">
+                    <div class="integrante circuloDR">
                         DR
                     </div>
-                    <div class="circuloRN">
+                    <div class="integrante circuloRN">
                         RN
                     </div>
                 </div>
-                <div class="Quitar5">
+                <div class="Quitar">
                     Quitar
                 </div>
-            </div>
             </div>
 
         </section>
     </main>
 
-    <script href="index.js"></script>
+
 
 </body>
 
