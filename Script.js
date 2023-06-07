@@ -1,5 +1,5 @@
 function llamarGrupo(){
-    console.log("Hola");
+    console.log("Ejemplo de pull");
 }
 
 
